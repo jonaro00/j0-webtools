@@ -43,14 +43,12 @@ function show(el) {
 function hide(el) {
 	document.getElementById(el).style.display = "none";
 }
-(
-	function dropdownClick() {
-		for (let cdd of document.getElementsByClassName("j0-dropdown-click")) {
-			cdd.getElementsByTagName("button")[0].onclick = () => {
-				let cont = cdd.getElementsByClassName("j0-dropdown-content")[0];
-				if (cont.style.display == "inline-block") cont.style.display = "none";
-				else cont.style.display = "inline-block";
-			};
-		}
+(function dropdownClick() {
+	for (let cdd of document.getElementsByClassName("j0-dropdown-click")) {
+		cdd.getElementsByTagName("button")[0].onclick = () => {
+			let cont = cdd.getElementsByClassName("j0-dropdown-content")[0];
+			if (cont.style.display == "inline-block") cont.style.display = "none";
+			else cont.style.display = "inline-block";
+		};
 	}
-)();
+})();
